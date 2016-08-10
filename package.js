@@ -6,13 +6,12 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.4');
 
-  api.use('underscore', 'client');
+  api.use(['underscore', 'ecmascript'], 'client');
 
   api.export('PersistentMinimongo2', 'client');
 
-  api.add_files('localforage.js', 'client');
   api.add_files('persistent-minimongo.js', 'client');
 });
 
